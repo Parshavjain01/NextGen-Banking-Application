@@ -2,47 +2,60 @@ package com.example.bank_app.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-// Light Theme Colors
-val Purple80 = Color(0xFFD0BCFF)
-val PurpleGrey80 = Color(0xFFCCC2DC)
-val Pink80 = Color(0xFFEFB8C8)
+// Light Theme Premium Colors
+val Purple80 = Color(0xFFE8DEFF)
+val PurpleGrey80 = Color(0xFFE0DAEC)
+val Pink80 = Color(0xFFFFD9E4)
 
-// Dark Theme Colors
-val Purple40 = Color(0xFF6650a4)
-val PurpleGrey40 = Color(0xFF625b71)
-val Pink40 = Color(0xFF7D5260)
+// Dark Theme Premium Colors
+val Purple40 = Color(0xFF5E35B1)
+val PurpleGrey40 = Color(0xFF544A6D)
+val Pink40 = Color(0xFFAD1457)
 
-// Card Gradient Colors
-val PurpleStart = Color(0xFFD24BE9)
-val PurpleEnd = Color(0xFFDF8FEC)
+// Premium Glassmorphism & Gradient Base Colors
+val GlassWhite = Color(0x20FFFFFF)
+val GlassDark = Color(0x30000000)
 
-val BlueStart = Color(0xFF2196F3)
-val BlueEnd = Color(0xFF79C3FD)
+val PurpleStart = Color(0xFF8E2DE2)
+val PurpleEnd = Color(0xFF4A00E0)
 
-val OrangeStart = Color(0xFFFF8400)
-val OrangeEnd = Color(0xFFFDA35F)
+val BlueStart = Color(0xFF00C6FF)
+val BlueEnd = Color(0xFF0072FF)
 
-val GreenStart = Color(0xFF11B114)
-val GreenEnd = Color(0xFF52DB59)
+val OrangeStart = Color(0xFFF2994A)
+val OrangeEnd = Color(0xFFF2C94C)
 
-// Additional Banking Colors
-val GoldStart = Color(0xFFFFD700)
-val GoldEnd = Color(0xFFFFA500)
+val GreenStart = Color(0xFF11998E)
+val GreenEnd = Color(0xFF38EF7D)
 
-val RedStart = Color(0xFFFF5252)
-val RedEnd = Color(0xFFFF8A80)
+val GoldStart = Color(0xFFFFDF00)
+val GoldEnd = Color(0xFFD4AF37)
 
-val TealStart = Color(0xFF00BFA5)
-val TealEnd = Color(0xFF64FFDA)
+val RedStart = Color(0xFFFF416C)
+val RedEnd = Color(0xFFFF4B2B)
 
-// Status Colors
-val SuccessGreen = Color(0xFF4CAF50)
-val WarningYellow = Color(0xFFFFC107)
-val ErrorRed = Color(0xFFF44336)
-val InfoBlue = Color(0xFF2196F3)
+val TealStart = Color(0xFF00B4DB)
+val TealEnd = Color(0xFF0083B0)
 
-// Neutral Colors
-val DarkBackground = Color(0xFF121212)
-val LightBackground = Color(0xFFF5F5F5)
-val CardDark = Color(0xFF1E1E1E)
+val ChromeStart = Color(0xFFECE9E6)
+val ChromeEnd = Color(0xFFFFFFFF)
+
+val ObsidianStart = Color(0xFF0F2027)
+val ObsidianMid = Color(0xFF203A43)
+val ObsidianEnd = Color(0xFF2C5364)
+
+// Advanced Status Colors
+val SuccessGreen = Color(0xFF00E676)
+val WarningYellow = Color(0xFFFFD600)
+val ErrorRed = Color(0xFFFF1744)
+val InfoBlue = Color(0xFF00B0FF)
+
+// Refined Neutral Colors
+val DarkBackground = Color(0xFF0A0A0B)
+val LightBackground = Color(0xFFF8F9FA)
+val CardDark = Color(0xFF16161A)
 val CardLight = Color(0xFFFFFFFF)
+val TextPrimaryDark = Color(0xFFF8F9FA)
+val TextSecondaryDark = Color(0xFFA0AAB2)
+val TextPrimaryLight = Color(0xFF121212)
+val TextSecondaryLight = Color(0xFF5F6368)

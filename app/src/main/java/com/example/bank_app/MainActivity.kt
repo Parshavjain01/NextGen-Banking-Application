@@ -127,7 +127,7 @@ fun HomeScreen(isDarkTheme: Boolean, onThemeChange: (Boolean) -> Unit) {
     ) { padding ->
         NavHost(
             navController = navController,
-            startDestination = "Login",
+            startDestination = "Lock",
             modifier = Modifier
                 .fillMaxSize()
                 .padding(padding),
@@ -144,6 +144,15 @@ fun HomeScreen(isDarkTheme: Boolean, onThemeChange: (Boolean) -> Unit) {
                 slideOutHorizontally(targetOffsetX = { 1000 }, animationSpec = tween(500)) + fadeOut(animationSpec = tween(500))
             }
         ) {
+            composable("Lock") {
+                LockScreen(
+                    onUnlock = {
+                        navController.navigate("Login") {
+                            popUpTo("Lock") { inclusive = true }
+                        }
+                    }
+                )
+            }
             composable("Login") {
                 LoginScreen(
                     onLoginClick = {
@@ -178,6 +187,7 @@ fun HomeScreen(isDarkTheme: Boolean, onThemeChange: (Boolean) -> Unit) {
                     onTopUpClick = { navController.navigate("TopUp") },
                     onCardClick = { index -> navController.navigate("CardDetails/$index") },
                     onSeeAllTransactionsClick = { navController.navigate("AllTransactions") },
+                    onAnalyticsClick = { navController.navigate("Analytics") },
                     onTransactionClick = { index -> 
                         navController.navigate("TransactionDetail/$index")
                     },
@@ -233,6 +243,11 @@ fun HomeScreen(isDarkTheme: Boolean, onThemeChange: (Boolean) -> Unit) {
                 val id = backStackEntry.arguments?.getInt("id") ?: 0
                 TransactionDetailScreen(
                     transactionId = id,
+                    onBackClick = { navController.popBackStack() }
+                )
+            }
+            composable("Analytics") {
+                AnalyticsScreen(
                     onBackClick = { navController.popBackStack() }
                 )
             }

@@ -79,7 +79,10 @@ val financeList = listOf(
 )
 
 @Composable
-fun FinanceSection(showSnackbar: (String) -> Unit = {}) {
+fun FinanceSection(
+    showSnackbar: (String) -> Unit = {},
+    onAnalyticsClick: () -> Unit = {}
+) {
     Column {
         Row(
             modifier = Modifier
@@ -107,8 +110,14 @@ fun FinanceSection(showSnackbar: (String) -> Unit = {}) {
         LazyRow(
             modifier = Modifier.padding(top = 12.dp)
         ) {
-            items(financeList.size) {
-                FinanceItem(it, onClick = { showSnackbar("Opening ${financeList[it].name.replace("\n", "")}...") })
+            items(financeList.size) { index ->
+                FinanceItem(index, onClick = {
+                    if (financeList[index].name.contains("Analytics")) {
+                        onAnalyticsClick()
+                    } else {
+                        showSnackbar("Opening ${financeList[index].name.replace("\n", "")}...")
+                    }
+                })
             }
         }
     }

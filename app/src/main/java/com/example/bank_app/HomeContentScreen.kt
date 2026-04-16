@@ -19,6 +19,7 @@ fun HomeContentScreen(
     onTopUpClick: () -> Unit,
     onCardClick: (Int) -> Unit = {},
     onSeeAllTransactionsClick: () -> Unit,
+    onAnalyticsClick: () -> Unit,
     onTransactionClick: (Int) -> Unit = {},
     showSnackbar: (String) -> Unit = {},
     modifier: Modifier = Modifier
@@ -40,7 +41,12 @@ fun HomeContentScreen(
         Spacer(modifier = Modifier.height(20.dp))
         CardsSection(onCardClick = onCardClick)
         Spacer(modifier = Modifier.height(20.dp))
-        FinanceSection(showSnackbar = showSnackbar)
+        SavingsGoalsSection()
+        Spacer(modifier = Modifier.height(20.dp))
+        FinanceSection(
+            showSnackbar = showSnackbar,
+            onAnalyticsClick = onAnalyticsClick
+        )
         Spacer(modifier = Modifier.height(20.dp))
         TransactionsSection(
             onSeeAllClick = onSeeAllTransactionsClick,
